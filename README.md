@@ -1,5 +1,6 @@
 # Bridging the Visual Gap: Wide-Range Image Blending
 PyTorch implementaton of our CVPR 2021 oral paper "Bridging the Visual Gap: Wide-Range Image Blending". 
+
 You can visit our project website [here](https://julia0607.github.io/Wide-Range-Image-Blending/).
 
 In this paper, we propose a novel model to tackle the problem of wide-range image blending, which aims to smoothly merge two different images into a panorama by generating novel image content for the intermediate region between them.
@@ -56,9 +57,7 @@ If your test data isn't paired already, add `--rand_pair True` to randomly pair 
 We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which we split the dataset to 5040 training images and 1000 testing images. 
 
 Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1TLh2Gg_iLf3BR3EcqJ0BTh17U6yCq2dD/view?usp=sharing) and put them under `data/`. 
-
 You can unzip the zip file with `jar xvf scenery6000_split.zip`. 
-
 Then run the training code for self-reconstruction stage (first stage):
 ```
 python train_SR.py
