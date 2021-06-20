@@ -1,10 +1,9 @@
 # Bridging the Visual Gap: Wide-Range Image Blending
 PyTorch implementaton of our CVPR 2021 oral paper "Bridging the Visual Gap: Wide-Range Image Blending". 
+You can visit our project website [here](https://julia0607.github.io/Wide-Range-Image-Blending/).
 
 In this paper, we propose a novel model to tackle the problem of wide-range image blending, which aims to smoothly merge two different images into a panorama by generating novel image content for the intermediate region between them.
-<div align=center><img height="300" src="https://github.com/julia0607/Wide-Range-Image-Blending/blob/main/samples/teaser.gif"/></div>
-
-**You can visit our project website [here](https://julia0607.github.io/Wide-Range-Image-Blending/).**
+<div align=center><img height="230" src="https://github.com/julia0607/Wide-Range-Image-Blending/blob/main/samples/teaser.gif"/></div>
 
 ## Paper
 [Bridging the Visual Gap: Wide-Range Image Blending](https://arxiv.org/abs/2103.15149)  
@@ -24,7 +23,7 @@ Please cite our paper if you find it useful for your research.
 
 ## Installation
 * This code was developed with Python 3.7.4 & Pytorch 1.0.0 & CUDA 9.2
-* Other requirements: numpy, skimage, tensorboardx
+* Other requirements: numpy, skimage, tensorboardX
 * Clone this repo
 ```
 git clone https://github.com/julia0607/Wide-Range-Image-Blending.git
@@ -54,9 +53,11 @@ python test.py --test_data_dir_1 YOUR_DATA_PATH_1
 If your test data isn't paired already, add `--rand_pair True` to randomly pair the data.
 
 ## Training
-We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which this dataset consists of 5040 training images and 1000 testing images.
+We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which we split the dataset to 5040 training images and 1000 testing images.
 Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1TLh2Gg_iLf3BR3EcqJ0BTh17U6yCq2dD/view?usp=sharing) and put them under `data/`.
+
 You can unzip the zip file with `jar xvf scenery6000_split.zip`.
+
 Then run the training code for self-reconstruction stage (first stage):
 ```
 python train_SR.py
@@ -81,4 +82,5 @@ If your train data isn't paired already, add `--rand_pair True` to randomly pair
 Visualization on TensorBoard for training and validation is supported. Run `tensorboard --logdir YOUR_LOG_DIR` to view training progress.
 
 ## Acknowledgments
-Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a pytorch re-implementation for [Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch). The implementation of ID-MRF loss is borrowed from [Image Inpainting via Generative Multi-column Convolutional Neural Networks](https://github.com/shepnerd/inpainting_gmcnn/tree/ba7f7109c38c3805800283cdb9d79cd7c4a3294f).
+Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a pytorch re-implementation for [Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch). 
+The implementation of ID-MRF loss is borrowed from [Image Inpainting via Generative Multi-column Convolutional Neural Networks](https://github.com/shepnerd/inpainting_gmcnn/tree/ba7f7109c38c3805800283cdb9d79cd7c4a3294f).
