@@ -53,10 +53,11 @@ python test.py --test_data_dir_1 YOUR_DATA_PATH_1
 If your test data isn't paired already, add `--rand_pair True` to randomly pair the data.
 
 ## Training
-We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which we split the dataset to 5040 training images and 1000 testing images.
-Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1TLh2Gg_iLf3BR3EcqJ0BTh17U6yCq2dD/view?usp=sharing) and put them under `data/`.
+We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which we split the dataset to 5040 training images and 1000 testing images. 
 
-You can unzip the zip file with `jar xvf scenery6000_split.zip`.
+Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1TLh2Gg_iLf3BR3EcqJ0BTh17U6yCq2dD/view?usp=sharing) and put them under `data/`. 
+
+You can unzip the zip file with `jar xvf scenery6000_split.zip`. 
 
 Then run the training code for self-reconstruction stage (first stage):
 ```
@@ -82,5 +83,6 @@ If your train data isn't paired already, add `--rand_pair True` to randomly pair
 Visualization on TensorBoard for training and validation is supported. Run `tensorboard --logdir YOUR_LOG_DIR` to view training progress.
 
 ## Acknowledgments
-Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a pytorch re-implementation for [Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch). 
+Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a pytorch re-implementation for [Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch).  
+
 The implementation of ID-MRF loss is borrowed from [Image Inpainting via Generative Multi-column Convolutional Neural Networks](https://github.com/shepnerd/inpainting_gmcnn/tree/ba7f7109c38c3805800283cdb9d79cd7c4a3294f).
