@@ -1,5 +1,5 @@
 # Bridging the Visual Gap: Wide-Range Image Blending
-PyTorch implementaton of our CVPR 2021 oral paper "Bridging the Visual Gap: Wide-Range Image Blending".  
+PyTorch implementaton of our CVPR 2021 paper "Bridging the Visual Gap: Wide-Range Image Blending".  
 You can visit our project website [here](https://julia0607.github.io/Wide-Range-Image-Blending/).
 
 In this paper, we propose a novel model to tackle the problem of wide-range image blending, which aims to smoothly merge two different images into a panorama by generating novel image content for the intermediate region between them.
