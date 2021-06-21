@@ -6,7 +6,7 @@ In this paper, we propose a novel model to tackle the problem of wide-range imag
 <div align=center><img height="230" src="https://github.com/julia0607/Wide-Range-Image-Blending/blob/main/samples/teaser.gif"/></div>
 
 ## Paper
-[Bridging the Visual Gap: Wide-Range Image Blending](https://arxiv.org/abs/2103.15149)  
+[Bridging the Visual Gap: Wide-Range Image Blending](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_Bridging_the_Visual_Gap_Wide-Range_Image_Blending_CVPR_2021_paper.html)  
 [Chia-Ni Lu](mailto:julialu67.cs08g@nctu.edu.tw), [Ya-Chu Chang](mailto:jenna.cs07g@nctu.edu.tw), [Wei-Chen Chiu](https://walonchiu.github.io/)  
 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
 
