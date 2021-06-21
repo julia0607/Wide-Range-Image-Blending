@@ -31,18 +31,12 @@ def evaluate(gen, eval_loader, rand_pair, save_dir):
         with torch.no_grad():
             I_pred_1_2, _, _, _ = gen(I1, I2)
             I_pred_2_1, _, _, _ = gen(I2, I1)
-         
-        I_pred_1_2_mid = torch.split(I_pred_1_2, imgSize, dim=3)[1]
-        I_pred_2_1_mid = torch.split(I_pred_2_1, imgSize, dim=3)[1]
 
-        result_1_2 = torch.cat((I1,I_pred_1_2_mid,I2),3)
-        result_2_1 = torch.cat((I2,I_pred_2_1_mid,I1),3)
+        I_pred_1_2 = np.transpose(I_pred_1_2[0].data.cpu().numpy(), (1,2,0))
+        I_pred_2_1 = np.transpose(I_pred_2_1[0].data.cpu().numpy(), (1,2,0))
 
-        result_1_2 = np.transpose(result_1_2[0].data.cpu().numpy(), (1,2,0))
-        result_2_1 = np.transpose(result_2_1[0].data.cpu().numpy(), (1,2,0))
-
-        skimage.io.imsave(join(save_dir, 'result1-2', '%s.png'%(name[0])), skimage.img_as_ubyte(result_1_2))
-        skimage.io.imsave(join(save_dir, 'result2-1', '%s.png'%(name[0])), skimage.img_as_ubyte(result_2_1))
+        skimage.io.imsave(join(save_dir, 'result1-2', '%s.png'%(name[0])), skimage.img_as_ubyte(I_pred_1_2))
+        skimage.io.imsave(join(save_dir, 'result2-1', '%s.png'%(name[0])), skimage.img_as_ubyte(I_pred_2_1))
 
         if rand_pair:
             I1 = np.transpose(I1[0].data.cpu().numpy(), (1,2,0))
