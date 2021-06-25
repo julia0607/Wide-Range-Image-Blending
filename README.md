@@ -81,5 +81,5 @@ If your train data isn't paired already, add `--rand_pair True` to randomly pair
 Visualization on TensorBoard for training and validation is supported. Run `tensorboard --logdir YOUR_LOG_DIR` to view training progress.
 
 ## Acknowledgments
-Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a pytorch re-implementation for [Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch).  
+Our code is partially based on [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) and a [pytorch re-implementation for Generative Image Inpainting with Contextual Attention](https://github.com/daa233/generative-inpainting-pytorch).  
 The implementation of ID-MRF loss is borrowed from [Image Inpainting via Generative Multi-column Convolutional Neural Networks](https://github.com/shepnerd/inpainting_gmcnn/tree/ba7f7109c38c3805800283cdb9d79cd7c4a3294f).
