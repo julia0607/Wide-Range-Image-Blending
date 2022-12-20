@@ -31,13 +31,13 @@ cd Wide-Range-Image-Blending
 ```
 
 ## Testing
-Download our pre-trained model weights from [here](https://drive.google.com/drive/folders/1YNN6_rhNXlOkunXZ0Ynj7SkObtTemHDY?usp=sharing) and put them under `weights/`. 
+Download our pre-trained model weights from [here](https://drive.google.com/drive/folders/1dRpBBFAYHlbOrRjpKiW6SvdU8AnTepqy?usp=share_link) and put them under `weights/`. 
 
 Test the sample data provided in this repo:
 ```
 python test.py
 ```
-Or download our paired test data from [here](https://drive.google.com/file/d/1G6mqSqx3XtVAsGWBnyxnAtSaocSIETkm/view?usp=sharing) and put them under `data/`.  
+Or download our paired test data from [here](https://drive.google.com/file/d/1d01cgpaEG4F1drGAE38gz_LsvUCTM6l_/view?usp=share_link) and put them under `data/`.  
 Then run the testing code:
 ```
 python test.py --test_data_dir_1 ./data/scenery6000_paired/test/input1/
@@ -55,13 +55,13 @@ If your test data isn't paired already, add `--rand_pair True` to randomly pair 
 ## Training
 We adopt the scenery dataset proposed by [Very Long Natural Scenery Image Prediction by Outpainting](https://github.com/z-x-yang/NS-Outpainting) for conducting our experiments, in which we split the dataset to 5040 training images and 1000 testing images. 
 
-Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1TLh2Gg_iLf3BR3EcqJ0BTh17U6yCq2dD/view?usp=sharing) and put them under `data/`.   
+Download the dataset with our split of train and test set from [here](https://drive.google.com/file/d/1wi3s9-_4b-UnPbkqjAXjuA4-bVyn1IAw/view?usp=share_link) and put them under `data/`.   
 You can unzip the `.zip` file with `jar xvf scenery6000_split.zip`.   
 Then run the training code for self-reconstruction stage (first stage):
 ```
 python train_SR.py
 ```
-After finishing the training of self-reconstruction stage, move the latest model weights from `checkpoints/SR_Stage/` to `weights/`, and run the training code for fine-tuning stage (second stage):
+After finishing the training of self-reconstruction stage, move the latest model weights from `checkpoints/SR_Stage/` to `weights/` (or use [our pre-train weights](https://drive.google.com/drive/folders/1CHvW6KHeLXVJSslvahEylDW70nJowWHR?usp=share_link) from self-reconstruction stage), and run the training code for fine-tuning stage (second stage):
 ```
 python train_FT.py --load_pretrain True
 ```
